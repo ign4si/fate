@@ -73,6 +73,13 @@ class StoryBrain {
   StoryBrain() {
     setStoryPath();
   }
+  bool buttonShouldBeVisible() {
+    if (storyNumber < 5) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   void nextStory(int choicenumber) {
     storyNumber = _storyData.elementAt(storyNumber).getchoices(choicenumber);
